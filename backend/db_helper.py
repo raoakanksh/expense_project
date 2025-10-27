@@ -41,6 +41,12 @@ def fetch_expenses_for_date(expense_date):
         expenses = cursor.fetchall()
         for expense in expenses:
             print(expense)
+    return expenses
+
+def insert_expense(expense_date, amount, category, notes):
+    with get_db_cursor(commit = True) as cursor:
+        query = "INSERT INTO expenses (expense_date, amount, category, notes) VALUES (%s, %s, %s, %s)"
+        cursor.execute(query, (expense_date, amount, category, notes))
 
 def fetch_expenses_between_dates(expense_date1, expense_date2):
     query = ("SELECT category as Category, SUM(amount) as Total FROM expenses WHERE expense_date BETWEEN %s AND %s GROUP BY category ORDER BY category")
@@ -59,6 +65,17 @@ def fetch_expenses_between_dates(expense_date1, expense_date2):
         for expense in expenses_between_dates:
             print(expense)
 
+    return expenses_between_dates
+
+def delete_expenses(expense_date):
+    with get_db_cursor(commit = True) as cursor:
+        query = "DELETE FROM expenses WHERE expense_date = (%s)"
+        cursor.execute(query, (expense_date,))
+
+
 if __name__ == "__main__":
-    print("Expenses for August 4th")
-    fetch_expenses_between_dates("2024-08-01", "2024-08-05")
+   print("fetch october 10")
+   fetch_expenses_for_date("2025-10-10")
+
+
+
