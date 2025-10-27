@@ -1,0 +1,6 @@
+echo "__pycache__/
+.env
+.DS_Store
+*.sqlite3
+node_modules/" > .gitignore
+
