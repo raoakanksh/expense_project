@@ -13,6 +13,10 @@ class AnalyticsRequest(BaseModel):
     expense_date1: date
     expense_date2: date
 
+class MonthAnalyticsRequest(BaseModel):
+    Month: str
+    Total : float
+
 app = FastAPI()
 
 @app.get("/expenses/{expense_date}", response_model = List[Expense]) #this specifies that i only want to get a list of whatever is in class expenses
@@ -31,6 +35,11 @@ def create_or_update(expense_date: date, expenses : List[Expense]):
 def get_analytics(request: AnalyticsRequest):
     analytics = db_helper.fetch_expenses_between_dates(request.expense_date1, request.expense_date2)
     return analytics
+
+@app.get("/analytics/month", response_model = List[MonthAnalyticsRequest])
+def get_analytics_month():
+    expenses = db_helper.fetch_data_by_month()
+    return expenses
 
 
 

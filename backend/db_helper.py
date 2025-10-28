@@ -4,6 +4,7 @@ import os
 from contextlib import contextmanager
 from dotenv import load_dotenv
 from logging_utils import setup_logger
+import calendar
 
 logger = setup_logger('db_helper')
 
@@ -38,6 +39,20 @@ def fetch_all_records():
         for expense in expenses:
             print(expense)
 
+def fetch_data_by_month():
+    logger.debug("Fetching data by month...")
+    query = "SELECT MONTH(expense_date) AS Month, SUM(amount) AS Total FROM expenses GROUP BY MONTH(expense_date) ORDER BY MONTH(expense_date);"
+    with get_db_cursor() as cursor:
+        cursor.execute(query)
+        expenses = cursor.fetchall()
+        updated_month_name = {}
+        for expense in expenses:
+            expense["Month"] = calendar.month_name[expense["Month"]]
+            #print(expense)
+            logger.debug(f"Month: {expense['Month']}, Total: {expense['Total']}")
+
+    print(expenses)
+    return expenses
 
 def fetch_expenses_for_date(expense_date):
     logger.info(f"Fetching expenses for date called with... : {expense_date}")
@@ -82,8 +97,7 @@ def delete_expenses(expense_date):
 
 
 if __name__ == "__main__":
-   print("fetch october 10")
-   fetch_expenses_between_dates("2024-08-1", "2024-08-04")
+    fetch_data_by_month()
 
 
 
