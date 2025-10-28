@@ -83,7 +83,7 @@ def delete_expenses(expense_date):
 
 if __name__ == "__main__":
    print("fetch october 10")
-   fetch_expenses_for_date("2025-10-10")
+   fetch_expenses_between_dates("2024-08-1", "2024-08-04")
 
 
 

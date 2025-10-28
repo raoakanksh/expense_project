@@ -78,3 +78,6 @@
 2025-10-28 14:28:20,745 - db_helper - INFO - Fetching expenses for date called with... : 2024-08-07
 2025-10-28 14:28:36,446 - db_helper - INFO - Fetching expenses for date called with... : 2024-08-01
 2025-10-28 14:28:39,559 - db_helper - INFO - Fetching expenses for date called with... : 2024-08-07
+2025-10-28 14:41:01,691 - db_helper - INFO - Fetching expenses for date called with... : 2025-10-10
+2025-10-28 14:41:36,764 - db_helper - INFO - Fetching expenses between dates {expense_date1} and {expense_date2} called...
+2025-10-28 14:57:13,462 - db_helper - INFO - Fetching expenses between dates {expense_date1} and {expense_date2} called...

@@ -9,6 +9,9 @@ class Expense(BaseModel):
     category: str
     notes: str
 
+class AnalyticsRequest(BaseModel):
+    expense_date1: date
+    expense_date2: date
 
 app = FastAPI()
 
@@ -23,3 +26,11 @@ def create_or_update(expense_date: date, expenses : List[Expense]):
     for expense in expenses:
         db_helper.insert_expense(expense_date, expense.amount, expense.category, expense.notes)
     return {"message": "Expense added successfully"}
+
+@app.post("/analytics")
+def get_analytics(request: AnalyticsRequest):
+    analytics = db_helper.fetch_expenses_between_dates(request.expense_date1, request.expense_date2)
+    return analytics
+
+
+
