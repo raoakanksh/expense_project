@@ -223,3 +223,40 @@
 2025-10-28 17:49:57,518 - db_helper - DEBUG - Month: August, Total: 6342.0
 2025-10-28 17:49:57,518 - db_helper - DEBUG - Month: September, Total: 4805.75
 2025-10-28 17:49:57,518 - db_helper - DEBUG - Month: October, Total: 699.9499893188477
+2025-10-28 17:54:24,690 - db_helper - INFO - Fetching expenses for date called with... : 2024-08-01
+2025-10-28 17:55:00,844 - db_helper - INFO - Fetching expenses for date called with... : 2024-08-01
+2025-10-28 17:57:05,691 - db_helper - INFO - Fetching expenses for date called with... : 2024-08-01
+2025-10-28 17:57:05,757 - db_helper - DEBUG - Fetching data by month...
+2025-10-28 17:57:05,791 - db_helper - DEBUG - Month: August, Total: 6342.0
+2025-10-28 17:57:05,791 - db_helper - DEBUG - Month: September, Total: 4805.75
+2025-10-28 17:57:05,791 - db_helper - DEBUG - Month: October, Total: 699.9499893188477
+2025-10-28 17:58:04,275 - db_helper - INFO - Fetching expenses for date called with... : 2024-08-01
+2025-10-28 17:58:04,337 - db_helper - DEBUG - Fetching data by month...
+2025-10-28 17:58:04,366 - db_helper - DEBUG - Month: August, Total: 6342.0
+2025-10-28 17:58:04,366 - db_helper - DEBUG - Month: September, Total: 4805.75
+2025-10-28 17:58:04,366 - db_helper - DEBUG - Month: October, Total: 699.9499893188477
+2025-10-28 18:01:11,580 - db_helper - INFO - Fetching expenses for date called with... : 2024-08-01
+2025-10-28 18:01:11,644 - db_helper - DEBUG - Fetching data by month...
+2025-10-28 18:01:11,676 - db_helper - DEBUG - Month: August, Total: 6342.0
+2025-10-28 18:01:11,676 - db_helper - DEBUG - Month: September, Total: 4805.75
+2025-10-28 18:01:11,676 - db_helper - DEBUG - Month: October, Total: 699.9499893188477
+2025-10-28 18:02:06,426 - db_helper - INFO - Fetching expenses for date called with... : 2024-08-01
+2025-10-28 18:02:06,483 - db_helper - DEBUG - Fetching data by month...
+2025-10-28 18:02:06,516 - db_helper - DEBUG - Month: August, Total: 6342.0
+2025-10-28 18:02:06,516 - db_helper - DEBUG - Month: September, Total: 4805.75
+2025-10-28 18:02:06,516 - db_helper - DEBUG - Month: October, Total: 699.9499893188477
+2025-10-28 18:03:30,347 - db_helper - INFO - Fetching expenses for date called with... : 2024-03-07
+2025-10-28 18:03:30,408 - db_helper - DEBUG - Fetching data by month...
+2025-10-28 18:03:30,437 - db_helper - DEBUG - Month: August, Total: 6342.0
+2025-10-28 18:03:30,437 - db_helper - DEBUG - Month: September, Total: 4805.75
+2025-10-28 18:03:30,437 - db_helper - DEBUG - Month: October, Total: 699.9499893188477
+2025-10-28 18:04:00,594 - db_helper - INFO - Fetching expenses for date called with... : 2024-03-07
+2025-10-28 18:04:00,650 - db_helper - INFO - Deleting expenses for date called with ...: 2024-03-07
+2025-10-28 18:04:00,678 - db_helper - INFO - Inserting expense for date called with... : 2024-03-07, amount : 150.0, category : Shopping, notes : LOL
+2025-10-28 18:04:00,700 - db_helper - INFO - Inserting expense for date called with... : 2024-03-07, amount : 280.0, category : Food, notes : Im hungry
+2025-10-28 18:04:00,718 - db_helper - INFO - Inserting expense for date called with... : 2024-03-07, amount : 10000.0, category : Other, notes : Travel
+2025-10-28 18:04:00,758 - db_helper - DEBUG - Fetching data by month...
+2025-10-28 18:04:00,776 - db_helper - DEBUG - Month: March, Total: 10430.0
+2025-10-28 18:04:00,777 - db_helper - DEBUG - Month: August, Total: 6342.0
+2025-10-28 18:04:00,777 - db_helper - DEBUG - Month: September, Total: 4805.75
+2025-10-28 18:04:00,777 - db_helper - DEBUG - Month: October, Total: 699.9499893188477
